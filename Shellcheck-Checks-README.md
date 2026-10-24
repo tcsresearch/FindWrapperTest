@@ -1,7 +1,10 @@
+
+
+### --- SC1000 Thru SC1999 --- ###
+
 | Check # | Description | 
 | -------- | -------- |
 
-### --- SC1000 Thru SC1999 --- ###
 | SC1000 |  `$` is not used specially and should therefore be escaped.
 | SC1001 |  This `\o` will be a regular 'o' in this context.
 | SC1003 |  Want to escape a single quote? `echo 'This is how it'\''s done'`.
@@ -135,6 +138,10 @@
 | SC1145 |  Unknown `external-sources` value. Expected `true`/`false`.
 
 ### --- SC2000 Thru SC2999 --- ###
+
+| Check # | Description | 
+| -------- | -------- |
+
 | SC2000 |  See if you can use `${#variable}` instead. | 
 | SC2001 |  See if you can use `${variable//search/replace}` instead. | 
 | SC2002 |  Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead. | 
@@ -463,6 +470,9 @@
 | SC2338 |  Prefer `==` over `=` for string comparisons in Bash tests. | 
 
 ### --- POSIX sh --- ###
+| Check # | Description | 
+| -------- | -------- |
+
 | SC3001 |  In POSIX sh, process substitution is undefined. | 
 | SC3002 |  In POSIX sh, extglob is undefined. | 
 | SC3003 |  In POSIX sh, `$'..'` is undefined. | 
