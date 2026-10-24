@@ -12,6 +12,7 @@ Test Project - Wrapper for Find For Use With Github Workflows &amp; Shellcheck. 
   
 <h4> Also includes: </h4>
 <ul>
+  <li> Our custom .shellchecrc file (shellcheckrc-custom1) [NOT TESTED YET!] </li>
   <li> an example .shellcheckrc file (shellcheckrc-example) </li>  
   <li>a list of known Shellcheck checks (Shellcheck-Checks-README.md / Shellcheck-Checks.list)</li>
 </ul>
