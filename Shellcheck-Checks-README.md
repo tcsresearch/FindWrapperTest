@@ -467,7 +467,7 @@
 | SC2337 |  In pipefail mode, flags like -q, -m, or -L can cause grep to exit early, aborting the pipeline with SIGPIPE. Use a non-pipe input like '< <(cmd)' or '<<<' instead. | 
 | SC2338 |  Prefer `==` over `=` for string comparisons in Bash tests. | 
 
-### --- POSIX sh --- ###
+### --- SC3000 Thru SC3999 (POSIX sh)  --- ###
 | Check # | Description | 
 | :---------- | :-------- |
 | SC3001 |  In POSIX sh, process substitution is undefined. | 
