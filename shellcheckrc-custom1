@@ -1,0 +1,22 @@
+# Taken From: https://sources.debian.org/src/distrobox/1.8.1.2-1/.shellcheckrc?pow_referer=https%3A%2F%2Fwww.google.com%2F
+
+# Overrides the shell detected from the shebang. This is useful for files meant to be included (and thus lacking a shebang), or possibly as a more targeted alternative to 'disable=SC2039'.
+shell=sh
+
+# Always allow ShellCheck to open arbitrary files from 'source' statements.
+external-sources=true
+
+# Enable all optional checks
+enable=all
+
+# Since we reference files via variables frequently, we don't want shellcheck to try to follow these just yet.
+# - Can't follow non-constant source. Use a directive to specify location.
+disable=SC1090
+
+# Since we frequently reference variables that are often defined in other files, we don't Shellcheck to warn us.
+# - foo appears unused. Verify it or export it.
+disable=SC2034
+
+# Since we frequently reference variables that are often defined in other files, we don't Shellcheck to warn us.
+# - var is referenced but not assigned.
+disable=SC2154
