@@ -3,46 +3,45 @@
 ### --- SC1000 Thru SC1999 --- ###
 
 | Check # | Description | 
-| :-------- | :-------- |
-
-| SC1000 |  `$` is not used specially and should therefore be escaped.
-| SC1001 |  This `\o` will be a regular 'o' in this context.
-| SC1003 |  Want to escape a single quote? `echo 'This is how it'\''s done'`.
-| SC1004 |  This backslash+linefeed is literal. Break outside single quotes if you just want to break the line.
-| SC1007 |  Remove space after `=` if trying to assign a value (or for empty string, use `var=""` ... ).
-| SC1008 |  This shebang was unrecognized. ShellCheck only supports sh/bash/dash/ksh. Add a 'shell' directive to specify.
-| SC1009 |  The mentioned parser error was in ...
-| SC1010 |  Use semicolon or linefeed before `done` (or quote to make it literal).
-| SC1011 |  This apostrophe terminated the single quoted string!
+| :---------- | :-------- |
+| SC1000 |  `$` is not used specially and should therefore be escaped. | 
+| SC1001 |  This `\o` will be a regular 'o' in this context. | 
+| SC1003 |  Want to escape a single quote? `echo 'This is how it'\''s done'`. | 
+| SC1004 |  This backslash+linefeed is literal. Break outside single quotes if you just want to break the line. | 
+| SC1007 |  Remove space after `=` if trying to assign a value (or for empty string, use `var=""` ... ). | 
+| SC1008 |  This shebang was unrecognized. ShellCheck only supports sh/bash/dash/ksh. Add a 'shell' directive to specify. | 
+| SC1009 |  The mentioned parser error was in ... | 
+| SC1010 |  Use semicolon or linefeed before `done` (or quote to make it literal). | 
+| SC1011 |  This apostrophe terminated the single quoted string! | 
 | SC1012 |  `\t` is just literal `t` here. For tab, use `"$(printf '\t')"` instead. | 
-| SC1014 |  Use `if cmd; then ..` to check exit code, or `if [ "$(cmd)" = .. ]` to check output.
+| SC1014 |  Use `if cmd; then ..` to check exit code, or `if [ "$(cmd)" = .. ]` to check output. | 
 | SC1015 |  This is a Unicode double quote. Delete and retype it. | 
 | SC1016 |  This is a Unicode single quote. Delete and retype it. | 
-| SC1017 |  Literal carriage return. Run script through `tr -d '\r'` .
-| SC1018 |  This is a Unicode non-breaking space. Delete it and retype as space.
-| SC1019 |  Expected this to be an argument to the unary condition.
-| SC1020 |  You need a space before the `]` or `]]`
-| SC1026 |  If grouping expressions inside `[[..]]`, use `( .. )`.
-| SC1027 |  Expected another argument for this operator.
+| SC1017 |  Literal carriage return. Run script through `tr -d '\r'` . | 
+| SC1018 |  This is a Unicode non-breaking space. Delete it and retype as space. | 
+| SC1019 |  Expected this to be an argument to the unary condition. | 
+| SC1020 |  You need a space before the `]` or `]]` | 
+| SC1026 |  If grouping expressions inside `[[..]]`, use `( .. )`. | 
+| SC1027 |  Expected another argument for this operator. | 
 | SC1028 |  In `[..]` you have to escape `\( \)` or preferably combine `[..]` expressions. | 
-| SC1029 |  In `[[..]]` you shouldn't escape `(` or `)`.
+| SC1029 |  In `[[..]]` you shouldn't escape `(` or `)`. | 
 | SC1033 |  Test expression was opened with double `[[` but closed with single `]`. Make sure they match. | 
 | SC1034 |  Test expression was opened with single `[` but closed with double `]]`. Make sure they match. | 
-| SC1035 |  You need a space here
+| SC1035 |  You need a space here. | 
 | SC1036 |  `(` is invalid here. Did you forget to escape it? | 
-| SC1037 |  Braces are required for positionals over 9, e.g. `${10}`.
-| SC1038 |  Shells are space sensitive. Use `< <(cmd)`, not `<<(cmd)`.
-| SC1039 |  Remove indentation before end token (or use `<<-` and indent with tabs).
-| SC1040 |  When using `<<-`, you can only indent with tabs.
-| SC1041 |  Found `eof` further down, but not on a separate line.
-| SC1043 |  Found EOF further down, but with wrong casing.
-| SC1044 |  Couldn't find end token `EOF` in the here document.
-| SC1045 |  It's not `foo &; bar`, just `foo & bar`.
-| SC1046 |  Couldn't find `fi` for this `if`.
-| SC1047 |  Expected `fi` matching previously mentioned `if`.
-| SC1048 |  Can't have empty then clauses (use `true` as a no-op).
-| SC1049 |  Did you forget the `then` for this `if`?
-| SC1050 |  Expected `then`.
+| SC1037 |  Braces are required for positionals over 9, e.g. `${10}`. | 
+| SC1038 |  Shells are space sensitive. Use `< <(cmd)`, not `<<(cmd)`. | 
+| SC1039 |  Remove indentation before end token (or use `<<-` and indent with tabs). | 
+| SC1040 |  When using `<<-`, you can only indent with tabs. | 
+| SC1041 |  Found `eof` further down, but not on a separate line. | 
+| SC1043 |  Found EOF further down, but with wrong casing. | 
+| SC1044 |  Couldn't find end token `EOF` in the here document. | 
+| SC1045 |  It's not `foo &; bar`, just `foo & bar`. | 
+| SC1046 |  Couldn't find `fi` for this `if`. | 
+| SC1047 |  Expected `fi` matching previously mentioned `if`. | 
+| SC1048 |  Can't have empty then clauses (use `true` as a no-op). | 
+| SC1049 |  Did you forget the `then` for this `if`? | 
+| SC1050 |  Expected `then`. | 
 | SC1051 |  Semicolons directly after `then` are not allowed. Just remove it. | 
 | SC1052 |  Semicolons directly after `then` are not allowed. Just remove it. | 
 | SC1053 |  Semicolons directly after `else` are not allowed. Just remove it. | 
@@ -57,90 +56,90 @@
 | SC1062 |  Expected `done` matching previously mentioned `do`. | 
 | SC1063 |  You need a line feed or semicolon before the `do`. | 
 | SC1064 |  Expected a `{` to open the function definition. | 
-| SC1065 |  Trying to declare parameters? Don't. Use `()` and refer to params as `$1`, `$2`, …
-| SC1066 |  Don't use `$` on the left side of assignments.
-| SC1067 |  For indirection, use arrays, `declare "var$n=value"`, or (for sh) `read`/`eval`
-| SC1068 |  Don't put spaces around the `=` in assignments.
-| SC1069 |  You need a space before the `[`.
-| SC1070 |  Parsing stopped here. Mismatched keywords or invalid parentheses?
-| SC1071 |  ShellCheck only supports sh/bash/dash/ksh scripts. Sorry!
-| SC1072 |  Unexpected ..
+| SC1065 |  Trying to declare parameters? Don't. Use `()` and refer to params as `$1`, `$2`, … | 
+| SC1066 |  Don't use `$` on the left side of assignments. | 
+| SC1067 |  For indirection, use arrays, `declare "var$n=value"`, or (for sh) `read`/`eval`. | 
+| SC1068 |  Don't put spaces around the `=` in assignments. | 
+| SC1069 |  You need a space before the `[`. | 
+| SC1070 |  Parsing stopped here. Mismatched keywords or invalid parentheses? | 
+| SC1071 |  ShellCheck only supports sh/bash/dash/ksh scripts. Sorry! | 
+| SC1072 |  Unexpected .. | 
 | SC1073 |  Couldn't parse this (thing). Fix to allow more checks. | 
 | SC1074 |  Did you forget the `;;` after the previous case item? | 
-| SC1075 |  Use `elif` instead of `else if`.
-| SC1076 |  Trying to do math? Use e.g. `[ $((i/2+7)) -ge 18 ]`.
-| SC1077 |  For command expansion, the tick should slant left (`` ` `` vs `´`).
-| SC1078 |  Did you forget to close this double-quoted string?
-| SC1079 |  This is actually an end quote, but due to next char it looks suspect.
-| SC1080 |  You need `\` before line feeds to break lines in `[ ]`.
-| SC1081 |  Scripts are case-sensitive. Use `if`, not `If`.
-| SC1082 |  This file has a UTF-8 BOM. Remove it with: `LC_CTYPE=C sed '1s/^...//' < yourscript`.
-| SC1083 |  This `{`/`}` is literal. Check if `;` is missing or quote the expression.
-| SC1084 |  Use `#!`, not `!#`, for the shebang.
+| SC1075 |  Use `elif` instead of `else if`. | 
+| SC1076 |  Trying to do math? Use e.g. `[ $((i/2+7)) -ge 18 ]`. | 
+| SC1077 |  For command expansion, the tick should slant left (`` ` `` vs `´`). | 
+| SC1078 |  Did you forget to close this double-quoted string? | 
+| SC1079 |  This is actually an end quote, but due to next char it looks suspect. | 
+| SC1080 |  You need `\` before line feeds to break lines in `[ ]`. | 
+| SC1081 |  Scripts are case-sensitive. Use `if`, not `If`. | 
+| SC1082 |  This file has a UTF-8 BOM. Remove it with: `LC_CTYPE=C sed '1s/^...//' < yourscript`. | 
+| SC1083 |  This `{`/`}` is literal. Check if `;` is missing or quote the expression. | 
+| SC1084 |  Use `#!`, not `!#`, for the shebang. | 
 | SC1085 |  Did you forget to move the ;; after extending this case item? | 
-| SC1086 |  Don't use `$` on the iterator name in for loops.
-| SC1087 |  Use braces when expanding arrays, e.g. `${array[idx]}` (or `${var}[..` to quiet).
-| SC1088 |  Parsing stopped here. Invalid use of parentheses?
-| SC1089 |  Parsing stopped here. Is this keyword correctly matched up?
-| SC1090 |  Can't follow non-constant source. Use a directive to specify location
-| SC1091 |  Not following: (error message here)
-| SC1092 |  Stopping at 100 `source` frames :O
+| SC1086 |  Don't use `$` on the iterator name in for loops. | 
+| SC1087 |  Use braces when expanding arrays, e.g. `${array[idx]}` (or `${var}[..` to quiet). | 
+| SC1088 |  Parsing stopped here. Invalid use of parentheses? | 
+| SC1089 |  Parsing stopped here. Is this keyword correctly matched up? | 
+| SC1090 |  Can't follow non-constant source. Use a directive to specify location. | 
+| SC1091 |  Not following: (error message here). | 
+| SC1092 |  Stopping at 100 `source` frames :O | 
 | SC1094 |  Parsing of sourced file failed. Ignoring it. | 
-| SC1095 |  You need a space or linefeed between the function name and body.
-| SC1097 |  Unexpected `==`. For assignment, use `=`. For comparison, use `[`/`[[`.
-| SC1098 |  Quote/escape special characters when using `eval`, e.g. `eval "a=(b)"`.
-| SC1099 |  You need a space before the `#`.
-| SC1100 |  This is a Unicode dash. Delete and retype as ASCII minus.
-| SC1101 |  Delete trailing spaces after `\` to break line (or use quotes for literal space).
-| SC1102 |  Shells disambiguate `$((` differently or not at all. For `$(command substitution)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors.
-| SC1103 |  This shell type is unknown. Use e.g. `sh` or `bash`.
-| SC1104 |  Use `#!`, not just `!`, for the shebang.
+| SC1095 |  You need a space or linefeed between the function name and body. | 
+| SC1097 |  Unexpected `==`. For assignment, use `=`. For comparison, use `[`/`[[`. | 
+| SC1098 |  Quote/escape special characters when using `eval`, e.g. `eval "a=(b)"`. | 
+| SC1099 |  You need a space before the `#`. | 
+| SC1100 |  This is a Unicode dash. Delete and retype as ASCII minus. | 
+| SC1101 |  Delete trailing spaces after `\` to break line (or use quotes for literal space). | 
+| SC1102 |  Shells disambiguate `$((` differently or not at all. For `$(command substitution)`, add space after `$(` . For `$((arithmetics))`, fix parsing errors. | 
+| SC1103 |  This shell type is unknown. Use e.g. `sh` or `bash`. | 
+| SC1104 |  Use `#!`, not just `!`, for the shebang. | 
 | SC1105 |  Shells disambiguate `((` differently or not at all. If the first `(` should start a subshell, add a space after it. | 
-| SC1106 |  In arithmetic contexts, use `<` instead of `-lt`
-| SC1107 |  This directive is unknown. It will be ignored.
-| SC1108 |  You need a space before and after the `=` .
-| SC1109 |  This is an unquoted HTML entity. Replace with corresponding character.
-| SC1110 |  This is a Unicode quote. Delete and retype it (or quote to make literal).
-| SC1111 |  This is a Unicode quote. Delete and retype it (or ignore/singlequote for literal).
-| SC1112 |  This is a Unicode quote. Delete and retype it (or ignore/doublequote for literal).
-| SC1113 |  Use `#!`, not just `#`, for the shebang.
-| SC1114 |  Remove leading spaces before the shebang.
-| SC1115 |  Remove spaces between `#` and `!` in the shebang.
-| SC1116 |  Missing `$` on a `$((..))` expression? (or use `( (` for arrays).
-| SC1117 |  Backslash is literal in `"\n"`. Prefer explicit escaping: `"\\n"`.
-| SC1118 |  Delete whitespace after the here-doc end token.
-| SC1119 |  Add a linefeed between end token and terminating `)`.
+| SC1106 |  In arithmetic contexts, use `<` instead of `-lt`. | 
+| SC1107 |  This directive is unknown. It will be ignored. | 
+| SC1108 |  You need a space before and after the `=` . | 
+| SC1109 |  This is an unquoted HTML entity. Replace with corresponding character. | 
+| SC1110 |  This is a Unicode quote. Delete and retype it (or quote to make literal). | 
+| SC1111 |  This is a Unicode quote. Delete and retype it (or ignore/singlequote for literal). | 
+| SC1112 |  This is a Unicode quote. Delete and retype it (or ignore/doublequote for literal). | 
+| SC1113 |  Use `#!`, not just `#`, for the shebang. | 
+| SC1114 |  Remove leading spaces before the shebang. | 
+| SC1115 |  Remove spaces between `#` and `!` in the shebang. | 
+| SC1116 |  Missing `$` on a `$((..))` expression? (or use `( (` for arrays). | 
+| SC1117 |  Backslash is literal in `"\n"`. Prefer explicit escaping: `"\\n"`. | 
+| SC1118 |  Delete whitespace after the here-doc end token. | 
+| SC1119 |  Add a linefeed between end token and terminating `)`. | 
 | SC1120 |  No comments allowed after here-doc token. Comment the next line instead. | 
-| SC1121 |  Add `;`/`&` terminators (and other syntax) on the line with the `<<`, not here.
-| SC1122 |  Nothing allowed after end token. To continue a command, put it on the line with the `<<`.
-| SC1123 |  ShellCheck directives are only valid in front of complete compound commands, like `if`, not e.g. individual `elif` branches.
-| SC1124 |  ShellCheck directives are only valid in front of complete commands like `case` statements, not individual case branches.
-| SC1125 |  Invalid `key=value` pair in directive
-| SC1126 |  Place shellcheck directives before commands, not after.
-| SC1127 |  Was this intended as a comment? Use `#` in sh.
-| SC1128 |  The shebang must be on the first line. Delete blanks and move comments.
-| SC1129 |  You need a space before the `!`.
-| SC1130 |  You need a space before the :.
-| SC1131 |  Use `elif` to start another branch.
-| SC1132 |  This `&` terminates the command. Escape it or add space after `&` to silence.
-| SC1133 |  Unexpected start of line. If breaking lines, `|`/`||`/`&&` should be at the end of the previous one.
-| SC1134 |  Error parsing `shellcheckrc`
-| SC1135 |  Prefer escape over ending quote to make `$` literal. Instead of `"It costs $"5`, use `"It costs \$5"`
-| SC1136 |  Unexpected characters after terminating `]`. Missing semicolon/linefeed?
-| SC1137 |  Missing second `(` to start arithmetic for ((;;)) loop
+| SC1121 |  Add `;`/`&` terminators (and other syntax) on the line with the `<<`, not here. | 
+| SC1122 |  Nothing allowed after end token. To continue a command, put it on the line with the `<<`. | 
+| SC1123 |  ShellCheck directives are only valid in front of complete compound commands, like `if`, not e.g. individual `elif` branches. | 
+| SC1124 |  ShellCheck directives are only valid in front of complete commands like `case` statements, not individual case branches. | 
+| SC1125 |  Invalid `key=value` pair in directive. | 
+| SC1126 |  Place shellcheck directives before commands, not after. | 
+| SC1127 |  Was this intended as a comment? Use `#` in sh. | 
+| SC1128 |  The shebang must be on the first line. Delete blanks and move comments. | 
+| SC1129 |  You need a space before the `!`. | 
+| SC1130 |  You need a space before the :. | 
+| SC1131 |  Use `elif` to start another branch. | 
+| SC1132 |  This `&` terminates the command. Escape it or add space after `&` to silence. | 
+| SC1133 |  Unexpected start of line. If breaking lines, `|`/`||`/`&&` should be at the end of the previous one. | 
+| SC1134 |  Error parsing `shellcheckrc`. | 
+| SC1135 |  Prefer escape over ending quote to make `$` literal. Instead of `"It costs $"5`, use `"It costs \$5"`. | 
+| SC1136 |  Unexpected characters after terminating `]`. Missing semicolon/linefeed? | 
+| SC1137 |  Missing second `(` to start arithmetic for ((;;)) loop | 
 | SC1138 |  Remove spaces between (( in arithmetic for loop. | 
-| SC1139 |  Use `||` instead of `-o` between test commands.
-| SC1140 |  Unexpected parameters after condition. Missing `&&`/`||`, or bad expression?
-| SC1141 |  Unexpected tokens after compound command. Bad redirection or missing `;`/`&&`/`||`/`|`?
-| SC1142 |  Use `done < <(cmd)` to redirect from process substitution (currently missing one `<`).
-| SC1143 |  This backslash is part of a comment and does not continue the line.
-| SC1144 |  `external-sources` can only be enabled in .shellcheckrc, not in individual files.
-| SC1145 |  Unknown `external-sources` value. Expected `true`/`false`.
+| SC1139 |  Use `||` instead of `-o` between test commands. | 
+| SC1140 |  Unexpected parameters after condition. Missing `&&`/`||`, or bad expression? | 
+| SC1141 |  Unexpected tokens after compound command. Bad redirection or missing `;`/`&&`/`||`/`|`? | 
+| SC1142 |  Use `done < <(cmd)` to redirect from process substitution (currently missing one `<`). | 
+| SC1143 |  This backslash is part of a comment and does not continue the line. | 
+| SC1144 |  `external-sources` can only be enabled in .shellcheckrc, not in individual files. | 
+| SC1145 |  Unknown `external-sources` value. Expected `true`/`false`. | 
 
 ### --- SC2000 Thru SC2999 --- ###
 
 | Check # | Description | 
-| :-------- | :-------- |
+| :---------- | :-------- |
 | SC2000 |  See if you can use `${#variable}` instead. | 
 | SC2001 |  See if you can use `${variable//search/replace}` instead. | 
 | SC2002 |  Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead. | 
@@ -470,7 +469,7 @@
 
 ### --- POSIX sh --- ###
 | Check # | Description | 
-| :-------- | :-------- |
+| :---------- | :-------- |
 | SC3001 |  In POSIX sh, process substitution is undefined. | 
 | SC3002 |  In POSIX sh, extglob is undefined. | 
 | SC3003 |  In POSIX sh, `$'..'` is undefined. | 
