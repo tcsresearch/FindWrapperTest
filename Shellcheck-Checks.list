@@ -1,3 +1,4 @@
+### --- SC2000 Thru SC2999 --- ###
 SC1000 – `$` is not used specially and should therefore be escaped.
 SC1001 – This `\o` will be a regular 'o' in this context.
 SC1003 – Want to escape a single quote? `echo 'This is how it'\''s done'`.
@@ -129,6 +130,8 @@ SC1142 – Use `done < <(cmd)` to redirect from process substitution (currently 
 SC1143 – This backslash is part of a comment and does not continue the line.
 SC1144 – `external-sources` can only be enabled in .shellcheckrc, not in individual files.
 SC1145 – Unknown `external-sources` value. Expected `true`/`false`.
+
+### --- SC2000 Thru SC2999 --- ###
 SC2000 – See if you can use `${#variable}` instead
 SC2001 – See if you can use `${variable//search/replace}` instead.
 SC2002 – Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead.
@@ -455,6 +458,8 @@ SC2334 – You probably wanted || here, otherwise it's always false.
 SC2335 – Use `[ "$var" -ne 1 ]` instead of `[ ! "$var" -eq 1 ]`
 SC2337 – In pipefail mode, flags like -q, -m, or -L can cause grep to exit early, aborting the pipeline with SIGPIPE. Use a non-pipe input like '< <(cmd)' or '<<<' instead.
 SC2338 – Prefer `==` over `=` for string comparisons in Bash tests.
+
+### --- POSIX sh --- ###
 SC3001 – In POSIX sh, process substitution is undefined.
 SC3002 – In POSIX sh, extglob is undefined.
 SC3003 – In POSIX sh, `$'..'` is undefined.
