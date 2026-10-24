@@ -21,12 +21,12 @@
 | SC1020 |  You need a space before the `]` or `]]`
 | SC1026 |  If grouping expressions inside `[[..]]`, use `( .. )`.
 | SC1027 |  Expected another argument for this operator.
-| SC1028 |  In `[..]` you have to escape `\( \)` or preferably combine `[..]` expressions.
+| SC1028 |  In `[..]` you have to escape `\( \)` or preferably combine `[..]` expressions. | 
 | SC1029 |  In `[[..]]` you shouldn't escape `(` or `)`.
 | SC1033 |  Test expression was opened with double `[[` but closed with single `]`. Make sure they match. | 
 | SC1034 |  Test expression was opened with single `[` but closed with double `]]`. Make sure they match. | 
 | SC1035 |  You need a space here
-| SC1036 |  `(` is invalid here. Did you forget to escape it?
+| SC1036 |  `(` is invalid here. Did you forget to escape it? | 
 | SC1037 |  Braces are required for positionals over 9, e.g. `${10}`.
 | SC1038 |  Shells are space sensitive. Use `< <(cmd)`, not `<<(cmd)`.
 | SC1039 |  Remove indentation before end token (or use `<<-` and indent with tabs).
@@ -43,17 +43,17 @@
 | SC1051 |  Semicolons directly after `then` are not allowed. Just remove it. | 
 | SC1052 |  Semicolons directly after `then` are not allowed. Just remove it. | 
 | SC1053 |  Semicolons directly after `else` are not allowed. Just remove it. | 
-| SC1054 |  You need a space after the `{`.
-| SC1055 |  You need at least one command here. Use `true;` as a no-op.
+| SC1054 |  You need a space after the `{`. | 
+| SC1055 |  You need at least one command here. Use `true;` as a no-op. | 
 | SC1056 |  Expected a `}`. If you have one, try a `;` or `\n` in front of it. | 
-| SC1057 |  Did you forget the `do` for this loop?
-| SC1058 |  Expected `do`.
+| SC1057 |  Did you forget the `do` for this loop? | 
+| SC1058 |  Expected `do`. | 
 | SC1059 |  Semicolon is not allowed directly after `do`. You can just delete it. | 
-| SC1060 |  Can't have empty do clauses (use `true` as a no-op)
-| SC1061 |  Couldn't find `done` for this `do`.
-| SC1062 |  Expected `done` matching previously mentioned `do`.
-| SC1063 |  You need a line feed or semicolon before the `do`.
-| SC1064 |  Expected a `{` to open the function definition.
+| SC1060 |  Can't have empty do clauses (use `true` as a no-op) | 
+| SC1061 |  Couldn't find `done` for this `do`. | 
+| SC1062 |  Expected `done` matching previously mentioned `do`. | 
+| SC1063 |  You need a line feed or semicolon before the `do`. | 
+| SC1064 |  Expected a `{` to open the function definition. | 
 | SC1065 |  Trying to declare parameters? Don't. Use `()` and refer to params as `$1`, `$2`, …
 | SC1066 |  Don't use `$` on the left side of assignments.
 | SC1067 |  For indirection, use arrays, `declare "var$n=value"`, or (for sh) `read`/`eval`
@@ -62,7 +62,7 @@
 | SC1070 |  Parsing stopped here. Mismatched keywords or invalid parentheses?
 | SC1071 |  ShellCheck only supports sh/bash/dash/ksh scripts. Sorry!
 | SC1072 |  Unexpected ..
-| SC1073 |  Couldn't parse this (thing). Fix to allow more checks.
+| SC1073 |  Couldn't parse this (thing). Fix to allow more checks. | 
 | SC1074 |  Did you forget the `;;` after the previous case item? | 
 | SC1075 |  Use `elif` instead of `else if`.
 | SC1076 |  Trying to do math? Use e.g. `[ $((i/2+7)) -ge 18 ]`.
@@ -135,100 +135,100 @@
 | SC1145 |  Unknown `external-sources` value. Expected `true`/`false`.
 
 ### --- SC2000 Thru SC2999 --- ###
-| SC2000 |  See if you can use `${#variable}` instead
+| SC2000 |  See if you can use `${#variable}` instead. | 
 | SC2001 |  See if you can use `${variable//search/replace}` instead. | 
 | SC2002 |  Useless cat. Consider `cmd < file | ..` or `cmd file | ..` instead. | 
-| SC2003 |  expr is antiquated. Consider rewriting this using `$((..))`, `${}` or `[[ ]]`.
-| SC2004 |  `$`/`${}` is unnecessary on arithmetic variables.
-| SC2005 |  Useless `echo`? Instead of `echo $(cmd)`, just use `cmd`
-| SC2006 |  Use `$(...)` notation instead of legacy backticked `` `...` ``.
-| SC2007 |  Use `$((..))` instead of deprecated `$[..]`.
-| SC2008 |  `echo` doesn't read from stdin, are you sure you should be piping to it?
-| SC2009 |  Consider using `pgrep` instead of grepping `ps` output.
-| SC2010 |  Don't use `ls | grep`. Use a glob or a for loop with a condition to allow non-alphanumeric filenames.
-| SC2011 |  Use `find -print0` or `find -exec` to better handle non-alphanumeric filenames.
-| SC2012 |  Use `find` instead of `ls` to better handle non-alphanumeric filenames.
+| SC2003 |  expr is antiquated. Consider rewriting this using `$((..))`, `${}` or `[[ ]]`. | 
+| SC2004 |  `$`/`${}` is unnecessary on arithmetic variables. | 
+| SC2005 |  Useless `echo`? Instead of `echo $(cmd)`, just use `cmd`. | 
+| SC2006 |  Use `$(...)` notation instead of legacy backticked `` `...` ``. | 
+| SC2007 |  Use `$((..))` instead of deprecated `$[..]`. | 
+| SC2008 |  `echo` doesn't read from stdin, are you sure you should be piping to it? | 
+| SC2009 |  Consider using `pgrep` instead of grepping `ps` output. | 
+| SC2010 |  Don't use `ls | grep`. Use a glob or a for loop with a condition to allow non-alphanumeric filenames. | 
+| SC2011 |  Use `find -print0` or `find -exec` to better handle non-alphanumeric filenames. | 
+| SC2012 |  Use `find` instead of `ls` to better handle non-alphanumeric filenames. | 
 | SC2013 |  To read lines rather than words, pipe/redirect to a `while read` loop. | 
-| SC2014 |  This will expand once before find runs, not per file found.
-| SC2015 |  Note that `A && B || C` is not if-then-else. C may run when A is true.
-| SC2016 |  Expressions don't expand in single quotes, use double quotes for that.
-| SC2017 |  Increase precision by replacing `a/b*c` with `a*c/b`.
-| SC2018 |  Use `[:lower:]` to support accents and foreign alphabets.
-| SC2019 |  Use `[:upper:]` to support accents and foreign alphabets.
-| SC2020 |  `tr` replaces sets of chars, not words (mentioned due to duplicates).
-| SC2021 |  Don't use `[]` around ranges in `tr`, it replaces literal square brackets.
-| SC2022 |  Note that unlike globs, `o*` here matches `ooo` but not `oscar`.
-| SC2023 |  The shell may override `time` as seen in man time(1). Use `command time ..` for that one.
-| SC2024 |  `sudo` doesn't affect redirects. Use `..| sudo tee file`
-| SC2025 |  Make sure all escape sequences are enclosed in `\[..\]` to prevent line wrapping issues.
-| SC2026 |  This word is outside of quotes. Did you intend to `'nest '"'single quotes'"'` instead?
-| SC2027 |  The surrounding quotes actually unquote this. Remove or escape them.
-| SC2028 |  `echo` won't expand escape sequences. Consider `printf`.
-| SC2029 |  Note that, unescaped, this expands on the client side.
-| SC2030 |  Modification of var is local (to subshell caused by pipeline).
-| SC2031 |  var was modified in a subshell. That change might be lost.
-| SC2032 |  This function can't be invoked via su on line 42.
-| SC2033 |  Shell functions can't be passed to external commands. Use separate script or sh -c.
+| SC2014 |  This will expand once before find runs, not per file found. | 
+| SC2015 |  Note that `A && B || C` is not if-then-else. C may run when A is true. | 
+| SC2016 |  Expressions don't expand in single quotes, use double quotes for that. | 
+| SC2017 |  Increase precision by replacing `a/b*c` with `a*c/b`. | 
+| SC2018 |  Use `[:lower:]` to support accents and foreign alphabets. | 
+| SC2019 |  Use `[:upper:]` to support accents and foreign alphabets. | 
+| SC2020 |  `tr` replaces sets of chars, not words (mentioned due to duplicates). | 
+| SC2021 |  Don't use `[]` around ranges in `tr`, it replaces literal square brackets. | 
+| SC2022 |  Note that unlike globs, `o*` here matches `ooo` but not `oscar`. | 
+| SC2023 |  The shell may override `time` as seen in man time(1). Use `command time ..` for that one. | 
+| SC2024 |  `sudo` doesn't affect redirects. Use `..| sudo tee file` | 
+| SC2025 |  Make sure all escape sequences are enclosed in `\[..\]` to prevent line wrapping issues. | 
+| SC2026 |  This word is outside of quotes. Did you intend to `'nest '"'single quotes'"'` instead? | 
+| SC2027 |  The surrounding quotes actually unquote this. Remove or escape them. | 
+| SC2028 |  `echo` won't expand escape sequences. Consider `printf`. | 
+| SC2029 |  Note that, unescaped, this expands on the client side. | 
+| SC2030 |  Modification of var is local (to subshell caused by pipeline). | 
+| SC2031 |  var was modified in a subshell. That change might be lost. | 
+| SC2032 |  This function can't be invoked via su on line 42. | 
+| SC2033 |  Shell functions can't be passed to external commands. Use separate script or sh -c. | 
 | SC2034 |  foo appears unused. Verify it or export it. | 
-| SC2035 |  Use `./*glob*` or `-- *glob*` so names with dashes won't become options.
-| SC2036 |  If you wanted to assign the output of the pipeline, use `a=$(b | c)` .
-| SC2037 |  To assign the output of a command, use `var=$(cmd)` .
-| SC2038 |  Use `-print0`/`-0` or `find -exec +` to allow for non-alphanumeric filenames.
+| SC2035 |  Use `./*glob*` or `-- *glob*` so names with dashes won't become options. | 
+| SC2036 |  If you wanted to assign the output of the pipeline, use `a=$(b | c)` . | 
+| SC2037 |  To assign the output of a command, use `var=$(cmd)` . | 
+| SC2038 |  Use `-print0`/`-0` or `find -exec +` to allow for non-alphanumeric filenames. | 
 | SC2039 |  In POSIX sh, *something* is undefined. | 
-| SC2040 |  `#!/bin/sh` was specified, so ____ is not supported, even when sh is actually bash.
-| SC2041 |  This is a literal string. To run as a command, use `$(..)` instead of `'..'` .
-| SC2042 |  Use spaces, not commas, to separate loop elements.
-| SC2043 |  This loop will only ever run once for a constant value. Did you perhaps mean to loop over `dir/*`, `$var` or `$(cmd)`?
+| SC2040 |  `#!/bin/sh` was specified, so ____ is not supported, even when sh is actually bash. | 
+| SC2041 |  This is a literal string. To run as a command, use `$(..)` instead of `'..'` . | 
+| SC2042 |  Use spaces, not commas, to separate loop elements. | 
+| SC2043 |  This loop will only ever run once for a constant value. Did you perhaps mean to loop over `dir/*`, `$var` or `$(cmd)`? | 
 | SC2044 |  For loops over find output are fragile. Use `find -exec` or a `while read` loop. | 
-| SC2045 |  Iterating over ls output is fragile. Use globs.
-| SC2046 |  Quote this to prevent word splitting.
-| SC2048 |  Use `"$@"` (with quotes) to prevent whitespace problems.
+| SC2045 |  Iterating over ls output is fragile. Use globs. | 
+| SC2046 |  Quote this to prevent word splitting. | 
+| SC2048 |  Use `"$@"` (with quotes) to prevent whitespace problems. | 
 | SC2049 |  `=~` is for regex, but this looks like a glob. Use `=` instead. | 
-| SC2050 |  This expression is constant. Did you forget the `$` on a variable?
-| SC2051 |  Bash doesn't support variables in brace range expansions.
-| SC2053 |  Quote the rhs of `=` in `[[ ]]` to prevent glob matching.
-| SC2054 |  Use spaces, not commas, to separate array elements.
-| SC2055 |  You probably wanted `&&` here, otherwise it's always true.
-| SC2056 |  You probably wanted `&&` here
-| SC2057 |  Unknown binary operator.
-| SC2058 |  Unknown unary operator.
-| SC2059 |  Don't use variables in the `printf` format string. Use `printf "..%s.." "$foo"`.
-| SC2060 |  Quote parameters to `tr` to prevent glob expansion.
+| SC2050 |  This expression is constant. Did you forget the `$` on a variable? | 
+| SC2051 |  Bash doesn't support variables in brace range expansions. |  | 
+| SC2053 |  Quote the rhs of `=` in `[[ ]]` to prevent glob matching. | 
+| SC2054 |  Use spaces, not commas, to separate array elements. | 
+| SC2055 |  You probably wanted `&&` here, otherwise it's always true. | 
+| SC2056 |  You probably wanted `&&` here. | 
+| SC2057 |  Unknown binary operator. | 
+| SC2058 |  Unknown unary operator. | 
+| SC2059 |  Don't use variables in the `printf` format string. Use `printf "..%s.." "$foo"`. | 
+| SC2060 |  Quote parameters to `tr` to prevent glob expansion. | 
 | SC2061 |  Quote the parameter to `-name` so the shell won't interpret it. | 
 | SC2062 |  Quote the grep pattern so the shell won't interpret it. | 
-| SC2063 |  Grep uses regex, but this looks like a glob.
-| SC2064 |  Use single quotes, otherwise this expands now rather than when signalled.
-| SC2065 |  This is interpreted as a shell file redirection, not a comparison.
-| SC2066 |  Since you double-quoted this, it will not word split, and the loop will only run once.
-| SC2067 |  Missing `;` or `+` terminating `-exec`. You can't use `|`/`||`/`&&`, and `;` has to be a separate, quoted argument.
-| SC2068 |  Double quote array expansions to avoid re-splitting elements.
-| SC2069 |  To redirect stdout+stderr, `2>&1` must be last (or use `{ cmd > file; } 2>&1` to clarify).
-| SC2070 |  `-n` doesn't work with unquoted arguments. Quote or use `[[ ]]`.
+| SC2063 |  Grep uses regex, but this looks like a glob. | 
+| SC2064 |  Use single quotes, otherwise this expands now rather than when signalled. | 
+| SC2065 |  This is interpreted as a shell file redirection, not a comparison. | 
+| SC2066 |  Since you double-quoted this, it will not word split, and the loop will only run once. | 
+| SC2067 |  Missing `;` or `+` terminating `-exec`. You can't use `|`/`||`/`&&`, and `;` has to be a separate, quoted argument. | 
+| SC2068 |  Double quote array expansions to avoid re-splitting elements. | 
+| SC2069 |  To redirect stdout+stderr, `2>&1` must be last (or use `{ cmd > file; } 2>&1` to clarify). | 
+| SC2070 |  `-n` doesn't work with unquoted arguments. Quote or use `[[ ]]`. | 
 | SC2071 |  `>` is for string comparisons. Use `-gt` instead. | 
-| SC2072 |  Decimals are not supported. Either use integers only, or use `bc` or `awk` to compare.
-| SC2073 |  Escape `\<` to prevent it redirecting (or switch to `[[ .. ]]`).
+| SC2072 |  Decimals are not supported. Either use integers only, or use `bc` or `awk` to compare. | 
+| SC2073 |  Escape `\<` to prevent it redirecting (or switch to `[[ .. ]]`). | 
 | SC2074 |  Can't use `=~` in `[ ]`. Use `[[..]]` instead. | 
-| SC2075 |  Escaping `\<` is required in `[..]`, but invalid in `[[..]]`
-| SC2076 |  Don't quote rhs of `=~`, it'll match literally rather than as a regex.
-| SC2077 |  You need spaces around the comparison operator.
-| SC2078 |  This expression is constant. Did you forget a `$` somewhere?
-| SC2079 |  `(( ))` doesn't support decimals. Use `bc` or `awk`.
-| SC2080 |  Numbers with leading 0 are considered octal.
-| SC2081 |  `[ .. ]` can't match globs. Use `[[ .. ]]` or grep.
-| SC2082 |  To expand via indirection, use `name="foo$n"; echo "${!name}"`.
-| SC2083 |  Don't add spaces after the slash in `./file`.
-| SC2084 |  Remove `$` or use `_=$((expr))` to avoid executing output.
-| SC2086 |  Double quote to prevent globbing and word splitting.
-| SC2087 |  Quote `EOF` to make here document expansions happen on the server side rather than on the client.
-| SC2088 |  Tilde does not expand in quotes. Use `$HOME`.
-| SC2089 |  Quotes/backslashes will be treated literally. Use an array.
-| SC2090 |  Quotes/backslashes in this variable will not be respected.
-| SC2091 |  Remove surrounding `$()` to avoid executing output (or use `eval` if intentional).
-| SC2092 |  Remove backticks to avoid executing output.
-| SC2093 |  Remove `exec ` if script should continue after this command.
-| SC2094 |  Make sure not to read and write the same file in the same pipeline.
-| SC2095 |  Use `ssh -n` to prevent ssh from swallowing stdin.
-| SC2096 |  On most OS, shebangs can only specify a single parameter.
+| SC2075 |  Escaping `\<` is required in `[..]`, but invalid in `[[..]]` | 
+| SC2076 |  Don't quote rhs of `=~`, it'll match literally rather than as a regex. | 
+| SC2077 |  You need spaces around the comparison operator. | 
+| SC2078 |  This expression is constant. Did you forget a `$` somewhere? | 
+| SC2079 |  `(( ))` doesn't support decimals. Use `bc` or `awk`. | 
+| SC2080 |  Numbers with leading 0 are considered octal. | 
+| SC2081 |  `[ .. ]` can't match globs. Use `[[ .. ]]` or grep. | 
+| SC2082 |  To expand via indirection, use `name="foo$n"; echo "${!name}"`. | 
+| SC2083 |  Don't add spaces after the slash in `./file`. | 
+| SC2084 |  Remove `$` or use `_=$((expr))` to avoid executing output. | 
+| SC2086 |  Double quote to prevent globbing and word splitting. | 
+| SC2087 |  Quote `EOF` to make here document expansions happen on the server side rather than on the client. | 
+| SC2088 |  Tilde does not expand in quotes. Use `$HOME`. | 
+| SC2089 |  Quotes/backslashes will be treated literally. Use an array. | 
+| SC2090 |  Quotes/backslashes in this variable will not be respected. | 
+| SC2091 |  Remove surrounding `$()` to avoid executing output (or use `eval` if intentional). | 
+| SC2092 |  Remove backticks to avoid executing output. | 
+| SC2093 |  Remove `exec ` if script should continue after this command. | 
+| SC2094 |  Make sure not to read and write the same file in the same pipeline. | 
+| SC2095 |  Use `ssh -n` to prevent ssh from swallowing stdin. | 
+| SC2096 |  On most OS, shebangs can only specify a single parameter. | 
 | SC2097 |  This assignment is only seen by the forked process. | 
 | SC2098 |  This expansion will not see the mentioned assignment. | 
 | SC2099 |  Use `$((..))` for arithmetics, e.g. `i=$((i + 2))` | 
@@ -292,7 +292,7 @@
 | SC2165 |  This nested loop overrides the index variable of its parent. | 
 | SC2166 |  Prefer `[ p ] && [ q ]` as `[ p -a q ]` is not well-defined. | 
 | SC2167 |  This parent loop has its index variable overridden. | 
-| SC2168 |  `local` is only valid in functions. | 
+| SC2168 |  `local` is only valid in functions. |  | 
 | SC2169 |  In dash, *something* is not supported. | 
 | SC2170 |  Invalid number for `-eq`. Use `=` to compare as string (or use `$var` to expand as a variable). | 
 | SC2171 |  Found trailing `]` outside test. Add missing `[` or quote if intentional. | 
@@ -376,7 +376,7 @@
 | SC2250 |  Prefer putting braces around variable references even when not strictly required. | 
 | SC2251 |  This `!` is not on a condition and skips errexit. Add `|| exit 1` or make sure `$?` is checked. | 
 | SC2252 |  You probably wanted `&&` here, otherwise it's always true. | 
-| SC2253 |  Use `-R` to recurse, or explicitly `a-r` to remove read permissions. | 
+| SC2253 |  Use `-R` to recurse, or explicitly `a-r` to remove read permissions. |  | 
 | SC2254 |  Quote expansions in case patterns to match literally rather than as a glob. | 
 | SC2255 |  `[ ]` does not apply arithmetic evaluation. Evaluate with `$((..))` for numbers, or use string comparator for strings. | 
 | SC2256 |  This translated string is the name of a variable. Flip leading `$` and `"` if this should be a quoted substitution. | 
@@ -423,7 +423,7 @@
 | SC2297 |  Double quotes must be outside `${}`: `${"invalid"}` vs `"${valid}"`. | 
 | SC2298 |  `${$x}` is invalid. For expansion, use ${x}. For indirection, use arrays, ${!x} or (for sh) eval. | 
 | SC2299 |  Parameter expansions can't be nested. Use temporary variables. | 
-| SC2300 |  Parameter expansion can't be applied to command substitutions. Use temporary variables. | 
+| SC2300 |  Parameter expansion can't be applied to command substitutions. |  Use temporary variables. | 
 | SC2301 |  Parameter expansion starts with unexpected quotes. Double check syntax. | 
 | SC2302 |  This loops over values. To loop over keys, use `"${!array[@]}"`. | 
 | SC2303 |  `i` is an array value, not a key. Use directly or loop over keys instead. | 
