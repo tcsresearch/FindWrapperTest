@@ -1,3 +1,5 @@
+#!/bin/env bash
+
 ### name: Lint .bfunc files
 ###      run: |
 
