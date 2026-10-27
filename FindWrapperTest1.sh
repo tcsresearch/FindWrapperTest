@@ -54,7 +54,7 @@
         
   # VarTest1 #
   function VarTest1() {
-     find . \( -path "*/_Old" -o -path "*/plugins" \) $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+     find . \( -path "*/_Old" -o -path "*/plugins" \) "$Find_CmdLines" -name "*.bfunc" -print0 | xargs "$XArgs_CmdLines" --exclude="$ShellCheck_Excludes"
 }
   # VarTest2 #
     function VarTest2() {
@@ -62,7 +62,7 @@
         Find_Excludes=( \( -path "*/_Old" -o -path "*/plugins" \) -prune -o -print )
 
     # Execute the command using the array
-         find . "${Find_Excludes[@]}" $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+         find . "${Find_Excludes[@]}" "$Find_CmdLines" -name "*.bfunc" -print0 | xargs "$XArgs_CmdLines" --exclude="$ShellCheck_Excludes"
 }
 
     # VarTest3
@@ -74,7 +74,7 @@
           Find_Excludes+=( -name "*.bfunc" -print0 )
 
       # 3. Execute the find command safely
-        find . "${Find_Excludes[@]}" | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+        find . "${Find_Excludes[@]}" | xargs "$XArgs_CmdLines" --exclude="$ShellCheck_Excludes"
 }        
 
 #############################################################################################################
