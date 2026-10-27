@@ -53,16 +53,20 @@
   ########## find . \( -path "*/_Old" -o -path "*/plugins" \) -prune -o -type f -name "*.bfunc" -print0 | xargs -0 -r shellcheck --shell=bash --exclude=SC1090,SC2034,SC2154
         
   # VarTest1 #
-    # find . \( -path "*/_Old" -o -path "*/plugins" \) $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
-
+  function VarTest1() {
+     find . \( -path "*/_Old" -o -path "*/plugins" \) $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+}
   # VarTest2 #
+    function VarTest2() {
     # Define the array
         Find_Excludes=( \( -path "*/_Old" -o -path "*/plugins" \) -prune -o -print )
 
     # Execute the command using the array
-        # find . "${Find_Excludes[@]}" $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+         find . "${Find_Excludes[@]}" $Find_CmdLines -name "*.bfunc" -print0 | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
+}
 
     # VarTest3
+    function VarTest3() {
       # 1. Initialize the array with the first set of arguments
             Find_Excludes=( \( -path "*/_Old" -o -path "*/plugins" \) -prune -o )
 
@@ -71,5 +75,16 @@
 
       # 3. Execute the find command safely
         find . "${Find_Excludes[@]}" | xargs $XArgs_CmdLines --exclude=$ShellCheck_Excludes
-        
+}        
+
+#############################################################################################################
+# Main Program #                                                                                            #
+#############################################################################################################
+
+echo "VarTest1: Minimal Variable Usage"
+echo "VarTest2: Moderate Variable Usage (w/ Array)"
+echo "VarTest3: Heavy Variable Usage (w/ Array & Appended Args)"
+echo " "
+
+
 
