@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+# shellcheck souyrce=/dev/null
+# shellcheck disable=SC2038
+
 ### name: Lint .bfunc files
 ###      run: |
 
